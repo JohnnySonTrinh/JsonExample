@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TJhJlgVbhbc=",
+  "dgSpecHash": "TUSd3JBNDVQ=",
   "success": true,
   "projectFilePath": "/Users/johnnytrinh/Documents/GitHub/JsonExample/JsonExample.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/johnnytrinh/.nuget/packages/newtonsoft.json/13.0.4/newtonsoft.json.13.0.4.nupkg.sha512"
+  ],
   "logs": []
 }
