@@ -1,51 +1,20 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System;
-using Newtonsoft.Json;
-
-// Simple Person class used for JSON deserialization
+﻿using Newtonsoft.Json;
 public class Person
 {
-	public string? FirstName { get; set; }
-	public string? LastName { get; set; }
+	public string? Name { get; set; }
 	public int Age { get; set; }
 }
-
-class Program
+public class Program
 {
-	static void Main(string[] args)
+	public static void Main()
 	{
-		// JSON string to parse
-		string json = "{ \"FirstName\": \"Alice\", \"LastName\": \"Smith\", \"Age\": 30 }";
-
-		// Deserialize using Newtonsoft.Json
-		Person? person = JsonConvert.DeserializeObject<Person>(json);
-
-		if (person is null)
-		{
-			Console.WriteLine("Failed to parse JSON into Person.");
-			return;
-		}
-
-		// Output parsed data
-		Console.WriteLine($"FirstName: {person.FirstName}");
-		Console.WriteLine($"LastName: {person.LastName}");
-		Console.WriteLine($"Age: {person.Age}");
-
-		Console.WriteLine(); // Empty line for separation
-
-		// Create a new Person object
-		Person newPerson = new Person
-		{
-			FirstName = "Bob",
-			LastName = "Johnson",
-			Age = 25
-		};
-
-		// Serialize the new Person object to JSON
-		string serializedJson = JsonConvert.SerializeObject(newPerson);
-
-		// Output the serialized JSON
-		Console.WriteLine("Serialized Person to JSON:");
-		Console.WriteLine(serializedJson);
+		// Deserialize JSON to Person object
+		string json = "{\"Name\": \"John Doe\", \"Age\": 30}";
+		Person person = JsonConvert.DeserializeObject<Person>(json)!;
+		Console.WriteLine($"Name: {person.Name}, Age: {person.Age}");
+		// Serialize Person object to JSON
+		Person newPerson = new Person { Name = "Ping Jeong", Age = 25 };
+		string newJson = JsonConvert.SerializeObject(newPerson);
+		Console.WriteLine($"Serialized JSON: {newJson}");
 	}
 }
