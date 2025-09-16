@@ -1,0 +1,95 @@
+# Visual Studio and .NET Core
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+
+# Rider
+.idea/
+*.sln.iml
+
+# NuGet
+*.nupkg
+!packages/**/*.nupkg
+packages/
+.project.json
+.project.lock.json
+.nuget/
+*.symbols.nupkg
+
+# Visual Studio Code workspace
+.history/
+
+# DotNet Core publish folder
+publish/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# IIS Express
+/.vs/localhost.*.user
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userprefs
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
+
+# Rider caches
+.idea/
+*.sublime-workspace
+
+# Resharper
+_ReSharper*
+*.DotSettings.user
+
+# Test results
+TestResults/
+
+# Generated files
+**/*.g.cs
+**/*.g.i.cs
+
+# Azure
+csx
+*.build.csdef
+
+# Others
+*.pidb
+*.svclog
+
+# Ensure compiled binaries from build output are ignored
+debug/
+release/
+
+# JetBrains Rider
+.idea/
+
+# Visual Studio Code settings
+.vscode/
+
+# Dotnet tool files
+.tools/
+
+# lockfile
+project.lock.json
+
+# Local user secrets
+secrets.json
+
+# OS generated files
+Thumbs.db
+
+# End of file
