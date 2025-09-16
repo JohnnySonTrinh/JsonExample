@@ -30,5 +30,22 @@ class Program
 		Console.WriteLine($"FirstName: {person.FirstName}");
 		Console.WriteLine($"LastName: {person.LastName}");
 		Console.WriteLine($"Age: {person.Age}");
+
+		Console.WriteLine(); // Empty line for separation
+
+		// Create a new Person object
+		Person newPerson = new Person
+		{
+			FirstName = "Bob",
+			LastName = "Johnson",
+			Age = 25
+		};
+
+		// Serialize the new Person object to JSON
+		string serializedJson = JsonConvert.SerializeObject(newPerson);
+
+		// Output the serialized JSON
+		Console.WriteLine("Serialized Person to JSON:");
+		Console.WriteLine(serializedJson);
 	}
 }
